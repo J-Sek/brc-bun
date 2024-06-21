@@ -61,7 +61,7 @@ function printResults() {
   const result =
     "{" +
     [...cities.keys()]
-      .toSorted()
+      .toSorted((a, b) => a.localeCompare(b))
       .map((city) => {
         const values = cities.get(city)!;
         const out = [

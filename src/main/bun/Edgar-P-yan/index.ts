@@ -119,7 +119,7 @@ for (let i = 0; i < chunkOffsets.length; i++) {
 }
 
 function printCompiledResults(compiledResults: CalcResultsCont): void {
-  const sortedStations = Array.from(compiledResults.keys()).sort();
+  const sortedStations = Array.from(compiledResults.keys()).toSorted((a, b) => a.localeCompare(b));
 
   process.stdout.write('{');
   for (let i = 0; i < sortedStations.length; i++) {

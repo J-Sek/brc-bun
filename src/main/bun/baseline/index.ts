@@ -36,7 +36,7 @@ readLineByLine(
 );
 
 function printCompiledResults(aggregations: AggregationsMap) {
-  const sortedStations = Array.from(aggregations.keys()).sort();
+  const sortedStations = Array.from(aggregations.keys()).toSorted((a, b) => a.localeCompare(b));
 
   let result =
     '{' +
